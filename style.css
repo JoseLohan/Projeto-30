@@ -1,0 +1,15 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+.breakButton{
+  width: 70px;
+  height: 70px;
+  background-image: url("assets/axe.png");
+  background-color: #80deea;
+  border-radius: 35px;
+  background-size: cover;
+  padding: 10px;
+  display: inline-block;
+  cursor: pointer;
+}
