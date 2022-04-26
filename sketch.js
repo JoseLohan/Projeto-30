@@ -36,6 +36,11 @@ function setup() {
   world = engine.world;
   frameRate(80);
 
+  breakButton = createButton("");
+  breakButton.position(width-200,height/2-50);
+  breakButton.class("breakButton")
+  breakButton.mouseClicked(handleButtonPressed);
+
   ground = new Base(0, height - 10, width * 2, 20, "#795548", true);
   leftWall = new Base(300, height / 2 + 50, 600, 100, "#8d6e63", true);
   rightWall = new Base(width - 300, height / 2 + 50, 600, 100, "#8d6e63", true);
@@ -58,11 +63,6 @@ function setup() {
 function draw() {
   background(background_img);
   Engine.update(engine);
-  
-  breakButton = createButton("");
-  breakButton.position(width-200,height/2-50);
-  breakButton.class("breakButton")
-  breakButton.mousePressed(handleButtonPressed);
 
   ground.show();
   bridge.show();
